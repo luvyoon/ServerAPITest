@@ -55,7 +55,14 @@ public class SignUpActivity extends BaseActivity {
 
                     return;
 
-                }if(!userPwEdt.getText().toString().equals(userPwCheckEdt.getText().toString()) ){
+                }
+
+                String firstPw = userPwEdt.getText().toString();
+                String secondPw = userPwCheckEdt.getText().toString();
+
+
+
+                if(!firstPw.equals(secondPw) ){
 
                     Toast.makeText(mContext, "비밀번호가 같지 않습니다", Toast.LENGTH_SHORT).show();
 
