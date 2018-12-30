@@ -3,4 +3,8 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="textBlack">#2d2d2d</color>
+    <color name="textTomato">#f44336</color>
+
 </resources>
