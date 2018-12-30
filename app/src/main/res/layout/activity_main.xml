@@ -52,7 +52,7 @@
 
 
     <Button
-        android:background="#ffffff"
+        android:background="#E0DDDD"
         android:id="@+id/loginBtn"
         android:layout_marginTop="12dp"
         android:layout_width="match_parent"

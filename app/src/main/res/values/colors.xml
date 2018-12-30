@@ -6,5 +6,6 @@
 
     <color name="textBlack">#2d2d2d</color>
     <color name="textTomato">#f44336</color>
+    <color name="white">#FFFFFF</color>
 
 </resources>

@@ -77,16 +77,16 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public void onResponse(Call call, final Response response) throws IOException {
 
-//                        runOnUiThread(new Runnable() {
-//                            @Override
-//                            public void run() {
-//
-//                                Toast.makeText(mContext, "연결 성공", Toast.LENGTH_SHORT).show();
-//
-//                                Log.d("리스폰스", response.body().toString());
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
 
-                        String responseBody = response.body().string();
-                        Log.d("응답내용",responseBody);
+                                Toast.makeText(mContext, "연결 성공", Toast.LENGTH_SHORT).show();
+
+                                Log.d("리스폰스", response.body().toString());
+
+//                        String responseBody = response.body().string();
+//                        Log.d("응답내용",responseBody);
 
                             }
                         });
