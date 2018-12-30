@@ -119,16 +119,40 @@ public class SignUpActivity extends BaseActivity {
 
 
 
-                        Log.d("회원가입리스폰스",response.body().string());
+                        String responseBody = response.body().string();
+                        Log.d("회원가입리스폰스", responseBody);
                         try {
 
+                            JSONObject root = new JSONObject(responseBody);
 
-                            JSONObject root = new JSONObject(response.body().string());
+                            final int code = root.getInt("code");
+                            final String message = root.getString("message");
+                            Log.d("회원가입리스폰스" ,"코드"+code);
+                            Log.d("회원가입리스폰스" ,"메세지"+code);
 
-                            int code = root.getInt("code");
-                            String message = root.getString("message");
-                            Log.d("회원가입 리스폰스" ,"코드"+code);
-                            Log.d("회원가입 리스폰스" ,"메세지"+code);
+
+                            runOnUiThread(new Runnable() {
+                                @Override
+                                public void run() {
+
+                                    if (code == 200){
+
+                                        Toast.makeText(mContext, "회원가입에 성공했습니다", Toast.LENGTH_SHORT).show();
+                                        finish();
+
+
+
+                                    }else {
+
+                                        Toast.makeText(mContext,message, Toast.LENGTH_SHORT).show();
+
+                                    }
+
+                                }
+                            });
+
+
+
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
